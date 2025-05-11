@@ -30,8 +30,8 @@ median_B = get_median (group_B)
 variance_A = get_variance (group_A)
 variance_B = get_variance (group_B)
 
-std_A = get_standard_deviation (variance_A)
-std_B = get_standard_deviation (variance_B)
+std_A = get_standard_deviation (group_A)
+std_B = get_standard_deviation (group_B)
 
 print(f"\nОсновні характеристики заданих вибірок:"
       f"\nСереднє значення:"
@@ -52,9 +52,9 @@ print(f"\nРезультати t-тесту для порівняння сере
       f"\nT-статистика: {t_statistic}"
       f"\nP-значення: {p_value}")
 if p_value < 0.05:
-    print("Різниця між середніми балами є значущою.")
+    print("\nРізниця між середніми балами є значущою.")
 else:
-    print("Статистично значущої різниці між середніми балами немає.")
+    print("\nСтатистично значущої різниці між середніми балами немає.")
 
 def plot_histogram(data, label):
     plt.hist(data, color='green', edgecolor='black')
