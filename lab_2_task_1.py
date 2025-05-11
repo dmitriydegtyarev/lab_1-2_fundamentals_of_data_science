@@ -40,8 +40,10 @@ values = np.array([4, 5, 3, 3, 5, 4, 1, 4, 3, 1, 3, 3, 1, 5, 3, 3, 2, 1, 5, 2])
 mean_value = get_mean (values)
 median_value = get_median (values)
 variance_value = get_variance (values)
-ci_mean = confidence_interval_mean(values)
-ci_variance = confidence_interval_variance(values)
+
+# Перетворення в тип даних float (вирішено за допомогою AI)
+ci_mean = tuple(float(x) for x in confidence_interval_mean(values))
+ci_variance = tuple(float(x) for x in confidence_interval_variance(values))
 
 print(f"\nОсновні характеристики вибірки:"
       f"\nСереднє значення: {mean_value}"
